@@ -1,3 +1,17 @@
+function nyaSearch(str)
+{
+	if (str.length > 8)
+		if (str.substr(-(str.length / 2)).search('nya~') != -1)
+			return true;
+		else
+			return false;
+	else
+		if (str.search('nya~') != -1)
+			return true;
+		else
+			return false;
+}
+
 function editPosts(posts)
 {
 	for (i = 0; i < posts.length; i++)
@@ -6,7 +20,7 @@ function editPosts(posts)
 		var postContents = posts[i].getElementsByClassName('post--content')[0].children;
 		var postContent = postContents[postContents.length - 1];
 
-		if ((username == 'RiN ') && (postContent.innerHTML.substr(-5) != ' nya~'))
+		if ((username == 'RiN ') && !nyaSearch(postContent.innerHTML))
 			postContent.innerHTML += ' nya~';
 	}
 }
@@ -19,7 +33,7 @@ function editComments(comments)
 		var commentContents = comments[i].children;
 		var commentContent = commentContents[commentContents.length - 1];
 
-		if ((username == 'RiN&nbsp;') && (commentContent.innerHTML.substr(-5) != ' nya~'))
+		if ((username == 'RiN&nbsp;') && !nyaSearch(commentContent.innerHTML))
 			commentContent.innerHTML += ' nya~';
 	}
 }
