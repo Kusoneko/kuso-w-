@@ -1,12 +1,15 @@
+var user = 'RiN';
+var postAddition = 'nya~';
+
 function nyaSearch(str)
 {
-	if (str.length > 8)
-		if (str.substr(-(str.length / 2)).search('nya~') != -1)
+	if (str.length > postAddition.length * 2)
+		if (str.substr(-(str.length / 2)).search(postAddition) != -1)
 			return true;
 		else
 			return false;
 	else
-		if (str.search('nya~') != -1)
+		if (str.search(postAddition) != -1)
 			return true;
 		else
 			return false;
@@ -20,8 +23,8 @@ function editPosts(posts)
 		var postContents = posts[i].getElementsByClassName('post--content')[0].children;
 		var postContent = postContents[postContents.length - 1];
 
-		if ((username == 'RiN ') && !nyaSearch(postContent.innerHTML))
-			postContent.innerHTML += ' nya~';
+		if ((username == user + ' ') && !nyaSearch(postContent.innerHTML))
+			postContent.innerHTML += ' ' + postAddition;
 	}
 }
 
@@ -33,8 +36,8 @@ function editComments(comments)
 		var commentContents = comments[i].children;
 		var commentContent = commentContents[commentContents.length - 1];
 
-		if ((username == 'RiN&nbsp;') && !nyaSearch(commentContent.innerHTML))
-			commentContent.innerHTML += ' nya~';
+		if ((username == user + '&nbsp;') && !nyaSearch(commentContent.innerHTML))
+			commentContent.innerHTML += ' ' + postAddition;
 	}
 }
 
