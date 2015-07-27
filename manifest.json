@@ -7,7 +7,7 @@
         ],
 		"matches": ["https://player.me/*"]
 	}],
-	"name": "RiN Nya~",
-    "description": "Adds nya~ to the end of RiN's posts and comments if not already present.",
+	"name": "Kuso ;w;",
+    "description": "Adds ;w; to the end of Kuso's posts and comments if not already present. Based on RiN Nya~.",
 	"version": "2.0.0"
 }
