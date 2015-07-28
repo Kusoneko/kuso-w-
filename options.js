@@ -64,7 +64,7 @@ function displayAdditions()
         if (items.additions != null)
         {
             for (i = 0; i < items.additions.length; i++)
-                document.getElementById('additionList').innerHTML += '<tr data-id="' + i + '"><td>' + items.additions[i].username + '</td><td>' + items.additions[i].postAddition + '</td><td><button class="deleteButton btn btn-default">Delete</button></td></tr>';
+                document.getElementById('additionList').innerHTML += '<tr data-id="' + i + '"><td>' + items.additions[i].username + '</td><td>' + items.additions[i].postAddition + '</td><td><button class="deleteButton btn btn-danger btn-xs btn-block">Delete</button></td></tr>';
             var deleteButtons = document.getElementsByClassName('deleteButton');
             for (i = 0; i < deleteButtons.length; i++)
                 deleteButtons[i].onclick = deleteItem;
