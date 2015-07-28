@@ -13,9 +13,11 @@ function addItem()
         chrome.storage.sync.set({additions: additions}, function()
         {
             document.getElementById('message').innerHTML = 'Added option';
+            document.getElementById('message').style.display = 'block';
             window.setTimeout(function()
             {
                 document.getElementById('message').innerHTML = '';
+                document.getElementById('message').style.display = 'none';
             }, 2000);
             displayAdditions();
         });
@@ -42,9 +44,11 @@ function deleteItem()
         chrome.storage.sync.set({additions: additions}, function()
         {
             document.getElementById('message').innerHTML = 'Removed option';
+            document.getElementById('message').style.display = 'block';
             window.setTimeout(function()
             {
                 document.getElementById('message').innerHTML = '';
+                document.getElementById('message').style.display = 'none';
             }, 2000);
             displayAdditions();
         });
@@ -53,19 +57,21 @@ function deleteItem()
 
 function displayAdditions()
 {
-    document.getElementById('additionList').innerHTML = '<tr><th>Username</th><th>Post addition</th></tr>';
+    document.getElementById('additionList').innerHTML = '';
 
     chrome.storage.sync.get('additions', function(items)
     {
         if (items.additions != null)
         {
             for (i = 0; i < items.additions.length; i++)
-                document.getElementById('additionList').innerHTML += '<tr data-id="' + i + '"><td>' + items.additions[i].username + '</td><td>' + items.additions[i].postAddition + '</td><td><button class="deleteButton">Delete</button></td></tr>';
+                document.getElementById('additionList').innerHTML += '<tr data-id="' + i + '"><td>' + items.additions[i].username + '</td><td>' + items.additions[i].postAddition + '</td><td><button class="deleteButton btn btn-default">Delete</button></td></tr>';
             var deleteButtons = document.getElementsByClassName('deleteButton');
             for (i = 0; i < deleteButtons.length; i++)
                 deleteButtons[i].onclick = deleteItem;
         }
     });
 }
+
+document.getElementById('message').style.display = 'none';
 
 displayAdditions();

@@ -18,7 +18,6 @@ function editPosts(posts)
         action: 'postAdditions'
     }, function(additions)
     {
-        console.log(additions);
         for (i = 0; i < posts.length; i++)
         {
             for (a = 0; i < additions.length; a++)
