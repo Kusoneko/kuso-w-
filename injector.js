@@ -20,7 +20,7 @@ function editPosts(posts)
     {
         for (i = 0; i < posts.length; i++)
         {
-            for (a = 0; i < additions.length; a++)
+            for (a = 0; a < additions.length; a++)
             {
                 var user = additions[a].username;
                 var postAddition = additions[a].postAddition;
@@ -44,7 +44,7 @@ function editComments(comments)
     {
         for (i = 0; i < comments.length; i++)
         {
-            for (a = 0; i < additions.length; a++)
+            for (a = 0; a < additions.length; a++)
             {
                 var user = additions[a].username;
                 var postAddition = additions[a].postAddition;
