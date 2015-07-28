@@ -1,4 +1,4 @@
-document.getElementById('submitButton').onclick = function()
+function addItem()
 {
     var username = document.getElementById('username').value;
     document.getElementById('username').value = '';
@@ -21,6 +21,15 @@ document.getElementById('submitButton').onclick = function()
         });
     });
 }
+function addItemKeyPress(e)
+{
+    if (e.keyCode == 13)
+        addItem();
+}
+
+document.getElementById('username').onkeypress = addItemKeyPress;
+document.getElementById('postAddition').onkeypress = addItemKeyPress;
+document.getElementById('submitButton').onclick = addItem;
 
 function deleteItem()
 {
