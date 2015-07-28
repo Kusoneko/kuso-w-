@@ -7,6 +7,9 @@
         ],
 		"matches": ["https://player.me/*"]
 	}],
+    "permissions": [
+        "storage"
+    ],
     "options_page": "options.html",
 	"name": "RiN Nya~",
     "description": "Adds nya~ to the end of RiN's posts and comments if not already present.",
