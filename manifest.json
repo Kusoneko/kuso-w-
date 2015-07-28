@@ -15,6 +15,6 @@
         "scripts": ["background.js"]
     },
     "name": "RiN Nya~",
-    "description": "Adds nya~ to the end of RiN's posts and comments if not already present.",
+    "description": "Allows users to add strings of text to the end of posts and comments on player.me if not already present.",
     "version": "3.0.0"
 }
