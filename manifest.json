@@ -7,9 +7,9 @@
         ],
         "matches": ["https://player.me/*"]
     }],
-    "background": [{
+    "background": {
         "scripts": ["background.js"]
-    }],
+    },
     "permissions": [
         "storage"
     ],
