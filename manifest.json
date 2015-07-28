@@ -7,13 +7,13 @@
         ],
         "matches": ["https://player.me/*"]
     }],
-    "background": {
-        "scripts": ["background.js"]
-    },
     "permissions": [
         "storage"
     ],
     "options_page": "options.html",
+    "background": {
+        "scripts": ["background.js"]
+    },
     "name": "RiN Nya~",
     "description": "Adds nya~ to the end of RiN's posts and comments if not already present.",
     "version": "3.0.0"
