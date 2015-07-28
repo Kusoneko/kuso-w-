@@ -1,17 +1,20 @@
 {
-	"manifest_version": 2,
-	"content_scripts": [{
-		"js": [
+    "manifest_version": 2,
+    "content_scripts": [{
+        "js": [
             "mutation-summary.js",
             "injector.js"
         ],
-		"matches": ["https://player.me/*"]
-	}],
+        "matches": ["https://player.me/*"]
+    }],
+    "background": [{
+        "scripts": ["background.js"]
+    }],
     "permissions": [
         "storage"
     ],
     "options_page": "options.html",
-	"name": "RiN Nya~",
+    "name": "RiN Nya~",
     "description": "Adds nya~ to the end of RiN's posts and comments if not already present.",
-	"version": "3.0.0"
+    "version": "3.0.0"
 }
