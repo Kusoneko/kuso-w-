@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RiN Nya~ control panel</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    </head>
+    <body>
+        <main class="container">
+            <br>
+
+            <div class="row">
+                <div class="col-sm-5">
+                    <input type="text" id="username" class="form-control" placeholder="Username">
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" id="postAddition" class="form-control" placeholder="Post addition">
+                </div>
+                <div class="col-sm-2">
+                    <button id="submitButton" class="btn btn-primary btn-block">Add</button>
+                </div>
+            </div>
+
+            <div id="message" class="alert alert-success" role="alert"></div>
+
+            <br>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th width="42.5%">Username</th>
+                        <th width="42.5%">Post addition</th>
+                        <th width="15%"></th>
+                    </tr>
+                </thead>
+
+                <tbody id="additionList"></tbody>
+            </table>
+        </main>
+
+        <script src="options.js"></script>
+    </body>
+</html>
