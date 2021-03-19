@@ -1,13 +1,20 @@
 {
-	"manifest_version": 2,
-	"content_scripts": [{
-		"js": [
+    "manifest_version": 2,
+    "content_scripts": [{
+        "js": [
             "mutation-summary.js",
             "injector.js"
         ],
-		"matches": ["https://player.me/*"]
-	}],
-	"name": "Kuso ;w;",
-    "description": "Adds ;w; to the end of Kuso's posts and comments if not already present. Based on RiN Nya~.",
-	"version": "2.0.0"
+        "matches": ["https://player.me/*"]
+    }],
+    "permissions": [
+        "storage"
+    ],
+    "options_page": "options.html",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "name": "Kuso ;w;",
+    "description": "Allows users to add strings of text to the end of posts and comments on player.me if not already present. Basically a carbon copy of RiN Nya~ after this commit.",
+    "version": "3.0.0"
 }
